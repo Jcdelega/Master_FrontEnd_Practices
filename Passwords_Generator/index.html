@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="password-generator">
+        <h1>Password Generator</h1>
+        <div class="password-display">
+            <span id="pass_generated">PTx1f5DaFX</span>
+            <button id="copy-button" title="Copy to clipboard">📋</button>
+        </div>
+        <div class="controls">
+            <label for="length-range">Character Length</label>
+            <input type="range" id="length-range" min="8" max="16" value="10">
+            <span id="length-value">10</span>
+            <div class="checkboxes">
+                <label><input type="checkbox" checked> Include Uppercase Letters</label>
+                <label><input type="checkbox" checked> Include Lowercase Letters</label>
+                <label><input type="checkbox" checked> Include Numbers</label>
+                <label><input type="checkbox" checked> Include Symbols</label>
+            </div>
+            <div class="strength">
+                <span>STRENGTH</span>
+                <span class="level">MEDIUM</span>
+                <div class="bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar empty"></div>
+                </div>
+            </div>
+            <button id="generate-button">Generate ➔</button>
+        </div>
+    </main>
+    <script src="/passwordGenerator.js"></script>
+  </body>
+</html>
